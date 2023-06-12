@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 #include <cstring>
-
+using namespace std;
 class Person {
 private:
     char* name; // The name of the occupant of the apartment
@@ -151,15 +151,15 @@ int main() {
     for (int i = 0; i < 2; i++) {
         Apartment* apartment = house.getApartment(i);
         if (apartment != nullptr) {
-            std::cout << "Apartment " << i << ":" << std::endl;
+            cout << "Apartment " << i << ":" <<endl;
             for (int j = 0; j < apartment->getNumResidents(); j++) {
                 const Person* resident = apartment->getResident(j);
                 if (resident != nullptr) {
-                    std::cout << "  Resident " << j << ": " << resident->getName() << std::endl;
+                    cout << "  Resident " << j << ": " << resident->getName()<<endl;
                 }
             }
         }
     }
-
+    system("pause");
     return 0;
 }
